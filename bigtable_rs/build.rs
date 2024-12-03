@@ -26,6 +26,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let descriptor_file = out.join("descriptors.bin");
 
     tonic_build::configure()
+        .protoc_arg("--experimental_allow_proto3_optional")
         .build_server(false)
         .out_dir("src/google")
         .compile_well_known_types(true)

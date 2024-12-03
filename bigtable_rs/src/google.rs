@@ -5,6 +5,9 @@ pub mod bigtable {
     pub mod v2;
 }
 
+#[path = "google/google.r#type.rs"]
+pub mod r#type;
+
 #[path = "google"]
 pub mod cloud {
     #[path = "./"]
